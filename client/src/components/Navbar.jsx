@@ -11,6 +11,7 @@ export const Navbar = () => {
           <li><NavLink className={(e) => { return e.isActive ? "active" : "" }} to="/blog">Blog</NavLink></li>
           <li><NavLink className={(e) => { return e.isActive ? "active" : "" }} to="/file_share">File Share</NavLink></li>
           <li><NavLink className={(e) => { return e.isActive ? "active" : "" }} to="/members">Members</NavLink></li>
+          <li><NavLink onClick={()=>localStorage.loggedIn = false} to="/login">{localStorage.loggedIn ? "Logout":"Login"}</NavLink></li>
         </ul>
       </nav>
 

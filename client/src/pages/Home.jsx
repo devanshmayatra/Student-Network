@@ -1,7 +1,21 @@
-import homeStudents from "../public/homeStudents.jpg"
+import homeStudents from "../assets/homeStudents.jpg"
+import axios from "axios"
+import { useState ,useEffect } from "react";
+
 
 
 export const Home = () => {
+  
+  // const API_URL = "http://localhost:3000/api";
+
+  // const fetchAPI = async ()=>{
+  //   const response = await axios.get(API_URL);
+  // }
+
+  // useEffect(()=>{
+  //   fetchAPI() 
+  // },[]);
+
   return (
     <div className="container">
       <div className="homeHome">

@@ -22,7 +22,6 @@ nav {
 .siteName {
   font-size: 1rem;
   width: 100px;
-  
 }
 
 .navLinks {
@@ -31,7 +30,7 @@ nav {
   position: absolute;
   top: 50px;
   right: 10px;
-  width: 90px;
+  width: 100px;
   border: 1px solid rgb(0 39 246);
   padding-left: 4px;
   background-color: aliceblue;
@@ -44,8 +43,12 @@ nav {
 
 .navLinks li a {
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.2rem;
   padding-left: 4px;
+}
+
+.navLinks li a:visited {
+  color: rgb(0 39 246);
 }
 
 .navLinks li {
@@ -117,48 +120,48 @@ nav {
   margin-left: 20px;
 }
 
-.homeHomeTitle{
+.homeHomeTitle {
   margin-bottom: 20px;
 }
 
-.homeStudentsImg{
+.homeStudentsImg {
   margin-top: 40px;
   width: 100%;
 }
 
 /* home events */
 
-.homeEventsTitle{
+.homeEventsTitle {
   margin-left: 20px;
   margin-top: 40px;
 }
 
-.homeEventContainer{
+.homeEventContainer {
   height: 200px;
   width: auto;
   border: 2px solid rgb(0 39 246);
   margin: 20px;
   display: flex;
-  justify-content:center;
-  align-items:center;
+  justify-content: center;
+  align-items: center;
 }
 
 /* home blog */
 
-.homeBlogTitle{
+.homeBlogTitle {
   border-bottom: 2px solid rgb(0 39 246);
   padding-bottom: 5px;
   margin: 20px;
   margin-left: 20px;
 }
 
-.homeBlogContainer{
+.homeBlogContainer {
   display: flex;
   justify-content: start;
   flex-direction: column;
 }
 
-.homeBlogCard{
+.homeBlogCard {
   height: 350px;
   width: 250px;
   margin: 0px auto;
@@ -166,8 +169,42 @@ nav {
   margin-top: 20px;
 }
 
+/* blog page  */
+
+.blogTitle {
+  color: white;
+  background-color: rgb(0 39 246);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  width: auto;
+  padding-left: 10px;
+  font-weight: 500;
+}
+
+.blogPostContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blogPost {
+  height: 70vh;
+  /* box-shadow: 0px 0px 0.5px 0px rgb(109, 109, 109); */
+  border: 1px solid black;
+  width: 310px;
+  margin-bottom: 20px;
+}
+
+.allPostTitle {
+  font-weight: 400;
+  font-size: 1.25rem;
+  margin: 40px 0px;
+  margin-left: 20px;
+}
+
 @media screen and (min-width: 500px) {
-  #root {
+  .app {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -235,28 +272,35 @@ nav {
     display: flex;
     flex-direction: column;
   }
-  
+
   .homeHomeTitle,
   .homeHomePara {
     width: 90%;
     font-weight: 400;
     width: 500px;
   }
-  
+
+  /* blog page  */
+
+  .blogPost {
+    width: 80%;
+    box-shadow: 0px 1px 0.5px 0px rgb(109, 109, 109);
+    height: 300px;
+    margin-bottom: 20px;
+  }
 }
 
 @media screen and (min-width: 600px) {
-
   /* home blog */
-  
-  .homeBlogContainer{
+
+  .homeBlogContainer {
     display: flex;
     justify-content: start;
     flex-direction: row;
   }
 
-  .homeBlogCard{
-    margin: 20px ;
+  .homeBlogCard {
+    margin: 20px;
   }
 }
 
@@ -297,13 +341,13 @@ nav {
 
   /* homeHome */
 
-  .homeHomePara{
+  .homeHomePara {
     font-size: 1.4rem;
     margin-left: 0px;
     width: 90%;
   }
 
-  .homeHomeTitle{
+  .homeHomeTitle {
     margin-top: 200px;
     margin-left: 0px;
     font-size: 3.5rem;
@@ -312,30 +356,43 @@ nav {
 
   /* home events  */
 
-  .homeEventsTitle{
+  .homeEventsTitle {
     margin-left: 0px;
   }
 
   /* home blog */
-  
-  .homeBlogTitle{
+
+  .homeBlogTitle {
     width: 100%;
     margin: 0px;
     margin-top: 40px;
   }
-  
-  .homeBlogContainer{
+
+  .homeBlogContainer {
     display: flex;
     justify-content: start;
     flex-direction: row;
   }
 
-  .homeBlogCard{
-    margin: 20px ;
+  .homeBlogCard {
+    margin: 20px;
   }
 
-  .homeBlogTitle,.homeEventsTitle{
+  .homeBlogTitle,
+  .homeEventsTitle {
     font-size: 3rem;
     font-weight: 500;
+  }
+
+  /* blog page  */
+
+  .blogPost {
+    width: 600px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .blogPost {
+    width: 800px;
   }
 }
